@@ -834,11 +834,11 @@ body {
         top: 38%;
         right: 20px;
         width: 60%;
-        background-size: 90%;
+        background-size: 100%;
     }
 
     .hero-title {
-        font-size: 24px;
+        font-size: 48px;
         margin-bottom: 25px;
         line-height: 1.9;
     }
@@ -1132,11 +1132,11 @@ body {
         top: 78%;
         right: -45px;
         width: 50%;
-        background-size: 186%;
+        background-size: 100%;
     }
 
     .hero-title {
-        font-size: 18px;
+        font-size: 36px;
         margin-bottom: 20px;
         line-height: 1.3;
     }
