@@ -1,3 +1,19 @@
+// ===== COMPONENT LOADER =====
+async function loadComponent(componentName, targetId) {
+    try {
+        const response = await fetch(`../components/${componentName}.html`);
+        if (response.ok) {
+            const html = await response.text();
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.innerHTML = html;
+            }
+        }
+    } catch (error) {
+        console.error(`Error loading ${componentName} component:`, error);
+    }
+}
+
 // ===== UTILITY FUNCTIONS =====
 const debounce = (func, wait) => {
     let timeout;
@@ -1141,4 +1157,9 @@ class App {
 
 // ===== INITIALIZE APPLICATION =====
 const app = new App();
-app.init(); 
+app.init();
+
+// ===== LOAD COMPONENTS =====
+document.addEventListener('DOMContentLoaded', function() {
+    loadComponent('footer', 'footer-component');
+}); 
