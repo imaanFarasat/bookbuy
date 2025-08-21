@@ -15,7 +15,7 @@
     <meta property="og:title" content="Nail Shapes Guide: Almond, Duck, &amp; More | Bea&#x27;s Nail Art">
     <meta property="og:description" content="Discover the perfect nail shape for you! From classic almond and duck to trendy stiletto and coffin, explore different nail shapes with Bea. Learn tips, tricks, and find inspiration for your next manicure.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bookbuy.com/nail-shape.html">
+    <meta property="og:url" content="https://bookbuy.com/nails/nail-shape.html">
     <meta property="og:site_name" content="BOOKBUY">
     
     <!-- Twitter Card Tags -->
@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="Discover the perfect nail shape for you! From classic almond and duck to trendy stiletto and coffin, explore different nail shapes with Bea. Learn tips, tricks, and find inspiration for your next manicure.">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://bookbuy.com/nail-shape.html">
+    <link rel="canonical" href="https://bookbuy.com/nails/nail-shape.html">
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" as="style">
@@ -216,6 +216,12 @@
     <!-- Background Image -->
     <div class="background-image"></div>
 
+    <!-- Header will be loaded here by JavaScript -->
+    <div id="header-container"></div>
+
+    <!-- Background Image -->
+    <div class="background-image"></div>
+
     <!-- Include Header Component -->
     <!-- Header Component -->
     <header class="header">
@@ -232,54 +238,116 @@
 
     <!-- Hero Section -->
     <main id="hero-section" class="hero-section">
-        <div class="hero-text">
-
-            <div class="subtitle">Perfect Nail Shapes with Bea - From Almond to Duck &amp; Everything In Between</div>
-            <h1 class="hero-title">Nail Shapes Guide: Almond, Duck, &amp; More | Bea&#x27;s Nail Art</h1>
-            <a href="https://bea-nails.bookbuy.ca/" class="cta-button">
-                <span class="cta-brackets">[</span>
-                Book Now
-                <span class="cta-brackets">]</span>
-            </a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="bea-photo-card">
+                        <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755166888/bea-professional-nail-technician-toronto.png" 
+                             alt="Bea - Professional Nail Technician Toronto" 
+                             class="bea-photo">
+                        <a href="https://bea-nails.bookbuy.ca/" class="cta-button mobile-cta">
+                            <span class="cta-brackets">[</span>
+                            Book Now
+                            <span class="cta-brackets">]</span>
+                        </a>
+                    
+                        <a href="https://bea-nails.bookbuy.ca/" class="cta-button mobile-cta">
+                            <span class="cta-brackets">[</span>
+                            Book Now
+                            <span class="cta-brackets">]</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <div class="subtitle">Perfect Nail Shapes with Bea - From Almond to Duck &amp; Everything In Between
+                    <a href="https://bea-nails.bookbuy.ca/" class="cta-button desktop-cta">
+                        <span class="cta-brackets">[</span>
+                        Book Now
+                        <span class="cta-brackets">]</span>
+                    </a>
+                </div>
+                    <h1 class="hero-title">Nail Shapes Guide: Almond, Duck, &amp; More | Bea&#x27;s Nail Art</h1>
+                    <a href="https://bea-nails.bookbuy.ca/" class="cta-button desktop-cta">
+                        <span class="cta-brackets">[</span>
+                        Book Now
+                        <span class="cta-brackets">]</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="hero-image" style="background-image: url('https://res.cloudinary.com/dvpoab5n3/image/upload/v1755166888/bea-professional-nail-technician-toronto.png')" role="img" aria-label="Professional nail salon services in downtown Toronto"></div>
     </main>
 
     <!-- Gallery Section -->
-    <main class="gallery-section">
-        <div class="gallery-container">
-            <!-- Large Image Cell (2x2) -->
-            <div class="grid-item cell-2x2">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-1.jpg" alt="nail-shape-1" class="sample-image">
+    <section class="gallery-section" aria-label="nail shape Design Gallery">
+        <div class="gallery-container" role="img" aria-label="Professional nail shape designs by Bea in Toronto">
+            <!-- Featured Design -->
+            <div class="grid-item cell-2x2" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-1.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="Featured nail shape Design">
+                <meta itemprop="description" content="Professional nail shape art by Bea in Toronto Downtown">
             </div>
 
-            <!-- First Row of Small Images (3x1) -->
-            <div class="grid-item cell-1x1">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-2.jpg" alt="nail-shape-2" class="sample-image">
+            <!-- Design Showcase -->
+            <div class="grid-item cell-1x1" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-2.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="French Tip Acrylic Nails">
             </div>
 
-            <div class="grid-item cell-1x1">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-3.jpg" alt="nail-shape-3" class="sample-image">
+            <div class="grid-item cell-1x1" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-3.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="Artistic Acrylic Nail Design">
             </div>
 
-            <div class="grid-item cell-1x1">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-4.jpg" alt="nail-shape-4" class="sample-image">
+            <div class="grid-item cell-1x1" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-4.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="Premium Acrylic Extensions">
             </div>
 
-            <!-- Second Row of Small Images (3x1) -->
-            <div class="grid-item cell-1x1">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-5.jpg" alt="nail-shape-5" class="sample-image">
+            <!-- Additional designs (hidden on mobile for better UX) -->
+            <div class="grid-item cell-1x1" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-5.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="Glitter Ombre Acrylic Nails">
             </div>
 
-            <div class="grid-item cell-1x1">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-6.jpg" alt="nail-shape-6" class="sample-image">
+            <div class="grid-item cell-1x1" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-6.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="Classic Acrylic Nail Shapes">
             </div>
 
-            <div class="grid-item cell-1x1">
-                <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755081936/nail-shape-7.jpg" alt="nail-shape-7" class="sample-image">
+            <div class="grid-item cell-1x1" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="https://bea-nails.bookbuy.ca/"><a href="https://bea-nails.bookbuy.ca/"><img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-7.jpg" 
+                     alt="Professional nail shape design with intricate patterns - Toronto nail salon" 
+                     class="sample-image"
+                     itemprop="contentUrl"
+                     loading="lazy"></a></a>
+                <meta itemprop="name" content="Luxury Embellished Acrylic Nails">
             </div>
         </div>
-    </main>
+    </section>
 
     <!-- Main Content Section -->
     <section class="main-content-section">
@@ -512,6 +580,7 @@
     <div id="footer-component"></div>
 
     <!-- Scripts -->
+        <script src="../js/header-loader.js"></script>
     <script src="../js/main.min.js"></script>
 </body>
 </html>

@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book with Bea - Coming Soon</title>
+    <title>BOOKBUY - Book & Buy Whatever You Want in Toronto Downtown Canada</title>
+    <meta name="description" content="Your ultimate platform in Canada! Book services and buy products - whatever you want with discounts and surprises. Specializing in Toronto, especially downtown.">
+    <meta name="author" content="BOOKBUY">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="BOOKBUY - Book & Buy Whatever You Want in Toronto Downtown Canada">
+    <meta property="og:description" content="Your ultimate platform in Canada! Book services and buy products - whatever you want with discounts and surprises. Specializing in Toronto, especially downtown.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bookbuy.com/">
+    <meta property="og:site_name" content="BOOKBUY">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BOOKBUY - Book & Buy Whatever You Want in Toronto Downtown Canada">
+    <meta name="twitter:description" content="Your ultimate platform in Canada! Book services and buy products - whatever you want with discounts and surprises. Specializing in Toronto, especially downtown.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bookbuy.com/">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* Reset and Base Styles */
+        /* ===== NEUMORPHIC DESIGN SYSTEM ===== */
+        :root {
+            /* Neumorphic Colors */
+            --bg-primary: #e0e5ec;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --accent-primary: #ff6b35;
+            --accent-secondary: #3498db;
+            
+            /* Neumorphic Shadows */
+            --shadow-light: -15px -15px 30px #ffffff;
+            --shadow-dark: 15px 15px 30px #a3b1c6;
+            --shadow-inset-light: inset -5px -5px 10px #ffffff;
+            --shadow-inset-dark: inset 5px 5px 10px #a3b1c6;
+            
+            /* Typography */
+            --font-primary: 'Poppins', sans-serif;
+        }
+
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -15,494 +56,664 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: white;
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
             min-height: 100vh;
+            line-height: 1.6;
         }
 
-        /* Header Styles */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #1a1a1a;
-            border-bottom: 1px solid #333;
+        /* ===== NEUMORPHIC COMPONENTS ===== */
+        .neuro-card {
+            background: var(--bg-primary);
+            border-radius: 20px;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            transition: all 0.3s ease;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: white;
+        .neuro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 20px 20px 40px #a3b1c6, -20px -20px 40px #ffffff;
         }
 
-        .logo-first {
-            color: #ff6b35;
-        }
-
-        .contact-info {
-            display: flex;
+        .neuro-button {
+            background: var(--bg-primary);
+            border: none;
+            border-radius: 15px;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            padding: 15px 30px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
         }
 
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #ff6b35;
-            border-radius: 8px;
+        .neuro-button:hover {
+            box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+            transform: scale(0.98);
+        }
+
+        .neuro-button.primary {
+            background: linear-gradient(135deg, var(--accent-primary), #e55a2b);
+            color: white;
+            box-shadow: 15px 15px 30px rgba(255, 107, 53, 0.3), -15px -15px 30px rgba(255, 255, 255, 0.7);
+        }
+
+        .neuro-button.primary:hover {
+            box-shadow: inset 5px 5px 10px rgba(229, 90, 43, 0.5), inset -5px -5px 10px rgba(255, 107, 53, 0.3);
+        }
+
+        .neuro-input {
+            background: var(--bg-primary);
+            border: none;
+            border-radius: 15px;
+            box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+            padding: 15px 20px;
+            font-family: var(--font-primary);
+            color: var(--text-primary);
+            width: 100%;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .neuro-input:focus {
+            box-shadow: inset 8px 8px 16px #a3b1c6, inset -8px -8px 16px #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            padding: 20px 40px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            color: white;
+            position: sticky;
+            top: 0;
+            background: rgba(224, 229, 236, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
         }
 
-        .phone {
-            color: white;
-            font-size: 16px;
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+            text-decoration: none;
         }
 
-        .menu-icon {
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
         }
 
-        /* Main Content */
-        .main-content {
-            padding: 40px;
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-primary);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            padding: 100px 40px;
+            text-align: center;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Coming Soon Card */
-        .coming-soon-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            margin-bottom: 40px;
-        }
-
-        .card-top {
-            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+        .hero-card {
+            background: var(--bg-primary);
+            border-radius: 30px;
+            box-shadow: 25px 25px 50px #a3b1c6, -25px -25px 50px #ffffff;
             padding: 60px 40px;
-            text-align: center;
-        }
-
-        .coming-soon-icon {
-            font-size: 80px;
-            color: #ff6b35;
-            margin-bottom: 30px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .coming-soon-title {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .coming-soon-subtitle {
-            font-size: 20px;
-            color: #ccc;
-            margin-bottom: 0;
-        }
-
-        /* Card Bottom */
-        .card-bottom {
-            padding: 60px 40px;
-            background: white;
-        }
-
-        /* Features Section */
-        .features-section {
             margin-bottom: 60px;
         }
 
-        .features-section h2 {
-            color: #333;
-            text-align: center;
-            font-size: 32px;
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text-secondary);
             margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* ===== SEARCH SECTION ===== */
+        .search-section {
+            padding: 0 40px 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .search-card {
+            background: var(--bg-primary);
+            border-radius: 25px;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            padding: 40px;
+        }
+
+        .search-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .search-form {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
         }
 
         .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-primary);
+            border-radius: 25px;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 25px 25px 50px #a3b1c6, -25px -25px 50px #ffffff;
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, var(--accent-primary), #e55a2b);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 15px 15px 30px rgba(255, 107, 53, 0.3), -15px -15px 30px rgba(255, 255, 255, 0.7);
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===== CATEGORIES SECTION ===== */
+        .categories-section {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e0e5ec 100%);
+        }
+
+        .categories-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .categories-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+
+        .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
-        .feature-item {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 15px;
-            background: #f8f9fa;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            color: #ff6b35;
-            margin-bottom: 20px;
-        }
-
-        .feature-item h3 {
-            color: #333;
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .feature-item p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 40px;
-            background: #f8f9fa;
+        .category-card {
+            background: var(--bg-primary);
             border-radius: 20px;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .contact-section h2 {
-            color: #333;
-            font-size: 28px;
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 20px 20px 40px #a3b1c6, -20px -20px 40px #ffffff;
+            color: inherit;
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            color: var(--accent-primary);
             margin-bottom: 15px;
         }
 
-        .contact-section p {
-            color: #666;
-            font-size: 18px;
+        .category-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* ===== LOCATION SECTION ===== */
+        .location-section {
+            padding: 80px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .location-card {
+            background: var(--bg-primary);
+            border-radius: 25px;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            padding: 50px 40px;
+        }
+
+        .location-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .location-subtitle {
+            font-size: 1.3rem;
+            color: var(--accent-primary);
+            font-weight: 600;
             margin-bottom: 30px;
         }
 
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+        .location-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 40px;
         }
 
-        .contact-button {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .phone-button {
-            background-color: #ff6b35;
-            color: white;
-        }
-
-        .phone-button:hover {
-            background-color: #e55a2b;
-            transform: translateY(-2px);
-        }
-
-        .email-button {
-            background-color: #333;
-            color: white;
-        }
-
-        .email-button:hover {
-            background-color: #555;
-            transform: translateY(-2px);
-        }
-
-        /* Social Section */
-        .social-section {
-            text-align: center;
-        }
-
-        .social-section h3 {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background-color: #ff6b35;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background-color: #e55a2b;
-            transform: scale(1.1);
-        }
-
-        /* Responsive Design */
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
             .header {
                 padding: 15px 20px;
             }
-            
-            .main-content {
-                padding: 20px;
+
+            .hero-section {
+                padding: 60px 20px;
             }
-            
-            .card-top {
+
+            .hero-card {
                 padding: 40px 20px;
             }
-            
-            .coming-soon-title {
-                font-size: 36px;
+
+            .hero-title {
+                font-size: 2.5rem;
             }
-            
-            .coming-soon-subtitle {
-                font-size: 18px;
+
+            .hero-subtitle {
+                font-size: 1.2rem;
             }
-            
-            .card-bottom {
-                padding: 40px 20px;
+
+            .search-section {
+                padding: 0 20px 60px;
             }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .contact-buttons {
+
+            .search-form {
                 flex-direction: column;
-                align-items: center;
             }
-            
-            .contact-button {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
+
+            .features-section,
+            .categories-section,
+            .location-section {
+                padding: 60px 20px;
             }
-            
-            .social-links {
-                gap: 15px;
+
+            .features-grid,
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
             }
         }
 
-        /* Loading Animation */
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #666;
+        /* ===== ANIMATIONS ===== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
 
-        .loading::after {
-            content: '';
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #ff6b35;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 10px;
+        .floating {
+            animation: float 6s ease-in-out infinite;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        /* ===== UTILITY CLASSES ===== */
+        .text-center { text-align: center; }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-40 { margin-bottom: 40px; }
     </style>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "BOOKBUY - Book & Buy Services in Toronto Downtown Canada",
+        "description": "Your ultimate booking platform in Canada! Book and buy whatever services you want with discounts and surprises. Specializing in Toronto, especially downtown.",
+        "url": "https://bookbuy.com/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "BOOKBUY",
+            "url": "https://bookbuy.com"
+        }
+    }
+    </script>
+    
+    <!-- Service Provider Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "BOOKBUY Booking Platform",
+        "description": "Your ultimate booking platform in Canada specializing in Toronto downtown. Book and buy whatever services you want with discounts and surprises.",
+        "url": "https://bookbuy.com/",
+        "provider": {
+            "@type": "Organization",
+            "name": "BOOKBUY",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Toronto"
+        },
+        "serviceType": "Online Booking Platform"
+    }
+    </script>
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
-        <div class="logo">
-            <span class="logo-first">B</span>EA
-        </div>
-        <div class="contact-info">
-            <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <span class="phone">+1 (555) 123-4567</span>
-        </div>
-        <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
+        <a href="/" class="logo">BOOKBUY</a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="coming-soon-card">
-            <!-- Top Section with Dark Background -->
-            <div class="card-top">
-                <div class="coming-soon-icon">
-                    <i class="fas fa-spa"></i>
-                </div>
-                <h1 class="coming-soon-title">Coming Soon</h1>
-                <p class="coming-soon-subtitle">Our online booking system is under construction</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-card floating">
+            <h1 class="hero-title">Welcome to BOOKBUY</h1>
+            <p class="hero-subtitle">Your Ultimate Platform</p>
+            <p class="hero-description">
+                Here is a place you can book and buy whatever services you want, you get your discounts and surprises - all in Canada, specially in Toronto and specially downtown Toronto.
+            </p>
+            <div class="hero-cta">
+                <a href="#services" class="neuro-button primary">
+                    <i class="fas fa-search"></i>
+                    Explore Services
+                </a>
+                <a href="#contact" class="neuro-button">
+                    <i class="fas fa-phone"></i>
+                    Get Started
+                </a>
             </div>
+        </div>
+    </section>
 
-            <!-- Bottom Section with White Background -->
-            <div class="card-bottom">
-                <div class="features-section">
-                    <h2>What's Coming</h2>
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <h3>Easy Online Booking</h3>
-                            <p>Book your nail services 24/7 with our convenient online system</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>All Ages Welcome</h3>
-                            <p>Services for Women, Men, and Kids with specialized treatments</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <h3>Flexible Scheduling</h3>
-                            <p>Choose from 9 AM to 9 PM with 30-minute time slots</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h3>Premium Services</h3>
-                            <p>Manicures, pedicures, acrylics, gels, and much more</p>
-                        </div>
-                    </div>
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-card">
+            <h2 class="search-title">What are you looking for?</h2>
+            <form class="search-form">
+                <input type="text" class="neuro-input search-input" placeholder="Search for services, products, deals: nails, spa, food, shopping...">
+                <button type="submit" class="neuro-button primary">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="about">
+        <h2 class="features-title">Why Choose BOOKBUY?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marker-alt"></i>
                 </div>
-
-                <div class="contact-section">
-                    <h2>Get in Touch</h2>
-                    <p>For now, please call us to book your appointment</p>
-                    <div class="contact-buttons">
-                        <a href="tel:+15551234567" class="contact-button phone-button">
-                            <i class="fas fa-phone"></i>
-                            Call Now
-                        </a>
-                        <a href="mailto:info@bookwithbea.com" class="contact-button email-button">
-                            <i class="fas fa-envelope"></i>
-                            Email Us
-                        </a>
-                    </div>
+                <h3 class="feature-title">Toronto Focused</h3>
+                <p class="feature-description">
+                    Specializing in Toronto, especially downtown Toronto. Local businesses, local deals, local surprises.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tags"></i>
                 </div>
+                <h3 class="feature-title">Amazing Discounts</h3>
+                <p class="feature-description">
+                    Get exclusive discounts and special offers. Save money while discovering the best services in the city.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="feature-title">Surprises Await</h3>
+                <p class="feature-description">
+                    Discover unexpected deals, hidden gems, and surprise offers that make your experience memorable.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="feature-title">Easy Discovery</h3>
+                <p class="feature-description">
+                    Find exactly what you want with our intuitive search and discovery features. Everything at your fingertips.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3 class="feature-title">Easy Transactions</h3>
+                <p class="feature-description">
+                    Seamless booking and buying experience with secure payments and instant confirmations. Get what you want with confidence.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-maple-leaf"></i>
+                </div>
+                <h3 class="feature-title">Proudly Canadian</h3>
+                <p class="feature-description">
+                    Supporting local Canadian businesses and communities. Your platform, your city, your Canada.
+                </p>
+            </div>
+        </div>
+    </section>
 
-                <div class="social-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+    <!-- Categories Section -->
+    <section class="categories-section" id="services">
+        <div class="categories-container">
+            <h2 class="categories-title">Explore Our Categories</h2>
+            <div class="categories-grid">
+                <a href="/nails/" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
                     </div>
+                    <h3 class="category-name">Beauty & Nails</h3>
+                </a>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="category-name">Food & Dining</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="category-name">Shopping</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="category-name">Fitness & Health</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="category-name">Transportation</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="category-name">Home Services</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="category-name">Education</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="category-name">Entertainment</h3>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="contact">
+        <div class="location-card">
+            <h2 class="location-title">Toronto Downtown</h2>
+            <p class="location-subtitle">🍁 Proudly Serving Canada</p>
+            <p class="location-description">
+                BOOKBUY is your local platform specializing in Toronto, with a special focus on downtown Toronto. 
+                We connect you with the best local businesses, exclusive deals, and surprising offers right in your neighborhood. 
+                Book services, buy products, and discover what makes Toronto special.
+            </p>
+            <div class="hero-cta">
+                <a href="mailto:hello@bookbuy.com" class="neuro-button primary">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </a>
+                <a href="tel:+14168881234" class="neuro-button">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
 
     <script>
-        // Simple JavaScript for Coming Soon page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Add click event for menu icon (placeholder for future navigation)
-            const menuIcon = document.querySelector('.menu-icon');
-            if (menuIcon) {
-                menuIcon.addEventListener('click', function() {
-                    alert('Menu coming soon!');
-                });
+        // Simple search functionality
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = document.querySelector('.search-input').value;
+            if (searchTerm.toLowerCase().includes('nail')) {
+                window.location.href = '/nails/';
+            } else {
+                alert('More categories coming soon! For now, try searching for "nails"');
             }
+        });
 
-            // Add hover effects for social links
-            const socialLinks = document.querySelectorAll('.social-link');
-            socialLinks.forEach(link => {
-                link.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.1)';
-                });
-                
-                link.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-
-            // Add click events for social links (placeholder)
-            socialLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('Social media links coming soon!');
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
-
-        // Optional: Add a simple countdown timer (if you want to show when the site will be ready)
-        function updateCountdown() {
-            // Set your target launch date here
-            const launchDate = new Date('2024-03-01').getTime();
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            if (distance > 0) {
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // You can add a countdown element to your HTML and update it here
-                // document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }
-        }
-
-        // Update countdown every second (uncomment if you want to use countdown)
-        // setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
