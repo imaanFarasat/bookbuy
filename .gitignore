@@ -1,6 +1,7 @@
 # Local Development Tools (DO NOT UPLOAD)
 generate-html-from-json.js
 nail-shop.json
+DEPLOYMENT-READY.md
 
 # Node.js Dependencies
 node_modules/
@@ -95,7 +96,7 @@ dist
 
 # Gatsby Files
 .cache/
-public
+# public - COMMENTED OUT: We need our public folder for deployment!
 
 # Vuepress Build Output
 .vuepress/dist

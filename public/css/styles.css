@@ -257,12 +257,8 @@ body {
     color: white;
 }
 
-/* Desktop/Mobile CTA visibility */
-.mobile-cta {
-    display: none;
-}
-
-.desktop-cta {
+/* Single responsive CTA button */
+.cta-button {
     display: inline-flex;
 }
 
@@ -867,16 +863,20 @@ body {
         transform: scale(1.02);
     }
     
-    /* Mobile CTA styling */
-    .mobile-cta {
-        display: inline-flex !important;
-        margin-top: 20px;
-        font-size: 0.9rem !important;
-        padding: 12px 24px !important;
+    /* Mobile CTA positioning - move below image */
+    .hero-content {
+        position: relative;
     }
     
-    .desktop-cta {
-        display: none !important;
+    .cta-button {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 350px !important; /* Position between image and subtitle */
+        font-size: 0.75rem !important;
+        padding: 8px 18px !important;
+        min-width: 100px !important; /* Ensure button is wide enough for single line */
+        z-index: 10;
     }
     
     .hero-title {
@@ -975,9 +975,11 @@ body {
         height: 250px !important;
     }
     
-    .mobile-cta {
-        font-size: 0.8rem !important;
-        padding: 10px 20px !important;
+    .cta-button {
+        font-size: 0.7rem !important;
+        padding: 8px 20px !important;
+        top: 290px !important; /* Position between image and subtitle on small screens */
+        min-width: 100px !important; /* Ensure button is wide enough for single line */
     }
     
     .hero-title {
