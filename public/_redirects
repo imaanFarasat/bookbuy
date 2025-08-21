@@ -1,3 +1,2 @@
 /nails/*    /nails/:splat.html   200
 /gems/*     /gems/:splat.html    200
-/*    /index.html   200
