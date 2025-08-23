@@ -199,7 +199,7 @@ class InteractionManager {
     init() {
         this.setupCTAButton();
         this.setupNavigationLinks();
-        this.setupMainContentCards();
+        // this.setupMainContentCards(); // DISABLED - causing conflicts with Read More functionality
         // this.setupReadMore(); // DISABLED - using simple modal approach instead
         this.setupFAQInteraction();
         this.setupSEOAnalytics();
