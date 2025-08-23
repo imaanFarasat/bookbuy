@@ -32,22 +32,76 @@ function toggleContent(cardId) {
     const card = document.querySelector(`[data-card-id="${cardId}"]`);
     if (!card) return;
     
-    const preview = card.querySelector('.content-preview');
-    const full = card.querySelector('.content-full');
-    const button = card.querySelector('.read-more-btn');
+    // Get the card title and full content
+    const cardTitle = card.querySelector('.main-content-title')?.textContent || 'Content';
+    const fullContent = card.querySelector('.content-full')?.innerHTML || '';
     
-    if (full.classList.contains('expanded')) {
-        // Collapse content - hide full content, show preview
-        full.classList.remove('expanded');
-        full.style.setProperty('display', 'none', 'important');
-        preview.style.setProperty('display', 'block', 'important');
-        button.textContent = 'Read More';
-    } else {
-        // Expand content - hide preview, show full content
-        full.classList.add('expanded');
-        full.style.setProperty('display', 'block', 'important');
-        preview.style.setProperty('display', 'none', 'important');
-        button.textContent = 'Read More';
+    // Create modal ID
+    const modalId = `modal-${cardId}`;
+    
+    // Check if modal already exists
+    let modal = document.getElementById(modalId);
+    
+    // If modal doesn't exist, create it
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = modalId;
+        modal.className = 'content-modal';
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        `;
+        
+        modal.innerHTML = `
+            <div style="
+                background: white;
+                max-width: 90%;
+                max-height: 90%;
+                overflow-y: auto;
+                border-radius: 16px;
+                padding: 30px;
+                position: relative;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            ">
+                <button onclick="closeModal('${modalId}')" style="
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                    color: #666;
+                ">&times;</button>
+                <h2 style="margin-bottom: 20px; color: #333;">${cardTitle}</h2>
+                <div class="modal-content">
+                    ${fullContent}
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+    }
+    
+    // Show the modal
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+// ===== CLOSE MODAL FUNCTION =====
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
     }
 }
 
