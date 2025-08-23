@@ -47,7 +47,7 @@ function toggleContent(cardId) {
         full.classList.add('expanded');
         full.style.display = 'block';
         preview.style.display = 'none';
-        button.textContent = 'Read Less';
+        button.textContent = 'Read More';
     }
 }
 
