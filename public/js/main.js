@@ -32,11 +32,17 @@ function toggleContent(cardId) {
     const card = document.querySelector(`[data-card-id="${cardId}"]`);
     if (!card) return;
     
-    // IMPORTANT: Remove any expanded class from main card elements to prevent CSS conflicts
+    // CRITICAL: Ensure main card elements NEVER get expanded class
     const mainCardFull = card.querySelector('.content-full');
     const mainCardPreview = card.querySelector('.content-preview');
-    if (mainCardFull) mainCardFull.classList.remove('expanded');
-    if (mainCardPreview) mainCardPreview.classList.remove('expanded');
+    if (mainCardFull) {
+        mainCardFull.classList.remove('expanded');
+        mainCardFull.style.setProperty('display', 'none', 'important');
+    }
+    if (mainCardPreview) {
+        mainCardPreview.classList.remove('expanded');
+        mainCardPreview.style.setProperty('display', 'block', 'important');
+    }
     
     // Get the card title and full content
     const cardTitle = card.querySelector('.main-content-title')?.textContent || 'Content';
