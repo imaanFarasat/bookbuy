@@ -39,11 +39,13 @@ function toggleContent(cardId) {
     if (full.classList.contains('expanded')) {
         // Collapse content
         full.classList.remove('expanded');
+        full.style.display = 'none';
         preview.style.display = 'block';
         button.textContent = 'Read More';
     } else {
         // Expand content
         full.classList.add('expanded');
+        full.style.display = 'block';
         preview.style.display = 'none';
         button.textContent = 'Read Less';
     }
