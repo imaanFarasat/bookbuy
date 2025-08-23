@@ -184,7 +184,7 @@ class InteractionManager {
         this.setupCTAButton();
         this.setupNavigationLinks();
         this.setupMainContentCards();
-        this.setupReadMore();
+        // this.setupReadMore(); // DISABLED - using simple modal approach instead
         this.setupFAQInteraction();
         this.setupSEOAnalytics();
     }
