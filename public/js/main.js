@@ -37,16 +37,16 @@ function toggleContent(cardId) {
     const button = card.querySelector('.read-more-btn');
     
     if (full.classList.contains('expanded')) {
-        // Collapse content
+        // Collapse content - hide full content, show preview
         full.classList.remove('expanded');
-        full.style.display = 'none';
-        preview.style.display = 'block';
+        full.style.setProperty('display', 'none', 'important');
+        preview.style.setProperty('display', 'block', 'important');
         button.textContent = 'Read More';
     } else {
-        // Expand content
+        // Expand content - hide preview, show full content
         full.classList.add('expanded');
-        full.style.display = 'block';
-        preview.style.display = 'none';
+        full.style.setProperty('display', 'block', 'important');
+        preview.style.setProperty('display', 'none', 'important');
         button.textContent = 'Read More';
     }
 }
