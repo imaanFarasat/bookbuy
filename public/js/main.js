@@ -100,6 +100,12 @@ function toggleContent(cardId) {
     // Show the modal
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    
+    // IMPORTANT: Ensure the button always shows "Read More"
+    const button = card.querySelector('.read-more-btn');
+    if (button) {
+        button.textContent = 'Read More';
+    }
 }
 
 // ===== CLOSE MODAL FUNCTION =====
