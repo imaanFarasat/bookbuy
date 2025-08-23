@@ -32,6 +32,12 @@ function toggleContent(cardId) {
     const card = document.querySelector(`[data-card-id="${cardId}"]`);
     if (!card) return;
     
+    // IMPORTANT: Remove any expanded class from main card elements to prevent CSS conflicts
+    const mainCardFull = card.querySelector('.content-full');
+    const mainCardPreview = card.querySelector('.content-preview');
+    if (mainCardFull) mainCardFull.classList.remove('expanded');
+    if (mainCardPreview) mainCardPreview.classList.remove('expanded');
+    
     // Get the card title and full content
     const cardTitle = card.querySelector('.main-content-title')?.textContent || 'Content';
     const fullContent = card.querySelector('.content-full')?.innerHTML || '';
@@ -102,6 +108,16 @@ function closeModal(modalId) {
     if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = '';
+        
+        // IMPORTANT: Ensure main card elements don't have expanded class
+        const cardId = modalId.replace('modal-', '');
+        const card = document.querySelector(`[data-card-id="${cardId}"]`);
+        if (card) {
+            const mainCardFull = card.querySelector('.content-full');
+            const mainCardPreview = card.querySelector('.content-preview');
+            if (mainCardFull) mainCardFull.classList.remove('expanded');
+            if (mainCardPreview) mainCardPreview.classList.remove('expanded');
+        }
     }
 }
 
