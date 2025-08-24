@@ -12,10 +12,40 @@
   from = "/nails/*"
   to = "/nails/:splat.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/gems/*"
   to = "/gems/:splat.html"
   status = 200
+  force = true
+
+# Handle www to non-www redirect
+[[redirects]]
+  from = "https://www.bookbuy.ca/*"
+  to = "https://bookbuy.ca/:splat"
+  status = 301
+  force = true
+
+# Handle HTTP to HTTPS redirect
+[[redirects]]
+  from = "http://bookbuy.ca/*"
+  to = "https://bookbuy.ca/:splat"
+  status = 301
+  force = true
+
+# Handle /lander redirect to homepage
+[[redirects]]
+  from = "/lander"
+  to = "/"
+  status = 301
+  force = true
+
+# Handle /index.html redirect to homepage
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
 
 

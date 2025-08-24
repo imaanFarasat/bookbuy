@@ -1,2 +1,6 @@
 /nails/*    /nails/:splat.html   200
 /gems/*     /gems/:splat.html    200
+https://www.bookbuy.ca/*    https://bookbuy.ca/:splat    301
+http://bookbuy.ca/*    https://bookbuy.ca/:splat    301
+/lander    /    301
+/index.html    /    301
