@@ -1252,3 +1252,106 @@ body {
         image-rendering: -webkit-optimize-contrast;
     }
 }
+
+/* ===== RELATED SERVICES SECTION ===== */
+.related-services-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e0e5ec 100%);
+}
+
+.related-services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.related-services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.related-services-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.related-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.related-service-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 30px #a3b1c6, -15px -15px 30px #ffffff;
+}
+
+.related-service-image {
+    height: 120px;
+    overflow: hidden;
+}
+
+.related-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.related-service-card:hover .related-service-image img {
+    transform: scale(1.05);
+}
+
+.related-service-content {
+    padding: 15px;
+}
+
+.related-service-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Responsive design for related services */
+@media (max-width: 768px) {
+    .related-services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .related-services-title {
+        font-size: 2rem;
+    }
+    
+    .related-service-image {
+        height: 100px;
+    }
+    
+    .related-service-content {
+        padding: 10px;
+    }
+    
+    .related-service-title {
+        font-size: 0.9rem;
+    }
+}

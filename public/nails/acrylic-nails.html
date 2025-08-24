@@ -679,7 +679,19 @@
         </div>
     </section>
 
-
+    <!-- Related Nail Services Section -->
+    <section class="related-services-section">
+        <div class="container">
+            <div class="related-services-header">
+                <h2 class="related-services-title">Explore All Nail Services</h2>
+                <p class="related-services-description">Discover our complete collection of professional nail services and designs</p>
+            </div>
+            
+            <div class="related-services-grid" id="related-services-grid">
+                <!-- Related services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Component -->
     <div id="footer-component"></div>
@@ -687,5 +699,81 @@
     <!-- Scripts -->
     <script src="../js/header-loader.js"></script>
     <script src="../js/main.js"></script>
+    
+    <script>
+        // Related Services Data - All nail services with their images and URLs
+        const allNailServices = [
+            { name: "Acrylic Nails", url: "acrylic-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/acrylic-nails-1.jpg" },
+            { name: "Gel Nails", url: "gel-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/gel-nails-1.jpg" },
+            { name: "French Tip Nails", url: "french-tip-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/french-tip-nails-1.jpg" },
+            { name: "Shellac Nails", url: "shellac-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/shellac-nails-1.jpg" },
+            { name: "Bio Gel Nails", url: "bio-gel-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/bio-gel-nails-1.jpg" },
+            { name: "Gel X Nails", url: "gel-x-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/gel-x-nails-1.jpg" },
+            { name: "Nail Design", url: "nail-design.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-design-1.jpg" },
+            { name: "Nail Design Ideas", url: "nail-design-ideas.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755979122/nail-design-ideas_1.jpg" },
+            { name: "Nail Shape Guide", url: "nail-shape.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-shape-1.jpg" },
+            { name: "Nail Paint Guide", url: "nail-paint.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755962038/nail-paint_1.jpg" },
+            { name: "Spring Nails 2025", url: "spring-nails-2025.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756005673/spring-nails-2025_1.jpg" },
+            { name: "Summer Nails", url: "summer-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/summer-nails-1.jpg" },
+            { name: "Fall Nails", url: "fall-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/fall-nails-1.jpg" },
+            { name: "Halloween Nails", url: "halloween-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755966590/halloween-nails_1.jpg" },
+            { name: "Christmas Nails", url: "christmas-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/christmas-nails-1.jpg" },
+            { name: "Red Nails", url: "red-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756010402/red-nails_1.jpg" },
+            { name: "Blue Nails", url: "blue-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756006985/blue-nails_1.jpg" },
+            { name: "Light Pink Nails", url: "light-pink-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756007489/light-pink-nails_1.jpg" },
+            { name: "Nude Nails", url: "nude-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756005496/nude-nails_1.jpg" },
+            { name: "Black Nail Designs", url: "black-nail-designs.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756006189/black-nail-designs_2.jpg" },
+            { name: "Chrome Nails", url: "chrome-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755958312/chrome-nails_1.jpg" },
+            { name: "Ombre Nails", url: "ombre-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755963912/ombre-nails_1.jpg" },
+            { name: "Champagne Nails", url: "champagne-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755965302/champagne-nails_1.jpg" },
+            { name: "Almond Nails", url: "almond-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755955397/almond-nails_1.jpg" },
+            { name: "Coffin Nails", url: "coffin-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755960186/coffin-nails_1.jpg" },
+            { name: "Stiletto Nails", url: "stiletto-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756005822/stiletto-nails_1.jpg" },
+            { name: "Fake Nails", url: "fake-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755965706/fake-nails_1.jpg" },
+            { name: "Glamnetic Nails", url: "glamnetic-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/glamnetic-nails-1.jpg" },
+            { name: "Nail Polish Remover", url: "nail-polish-remover.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756005080/nail-polish-remover_1.jpg" },
+            { name: "Remove Gel Nails at Home", url: "how-to-remove-gel-nails-at-home.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755962931/how-to-remove-gel-nails-at-home_1.jpg" },
+            { name: "Nail Fungus Treatment", url: "nail-fungs.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755961634/nail-fungs_1.jpg" },
+            { name: "Toe Nail Fungus", url: "toe-nail-fungus.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756006074/toe-nail-fungus_1.jpg" },
+            { name: "Pedi & Nails", url: "pedi-and-nails.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756010229/pedi-and-nails_1.jpg" },
+            { name: "Nail Spa", url: "nail-spa.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756005254/nail-spa_1.jpg" },
+            { name: "Nail Salon Near Me", url: "nail-salon-near-me.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-salon-near-me-1.jpg" },
+            { name: "Nail Supply Store", url: "nail-supply-store.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1755084654/nail-design-1.jpg" },
+            { name: "DND Nail Polish", url: "dnd-nail-polish.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756007232/dnd-nail-polish_1.jpg" },
+            { name: "Shellac Nail Polish", url: "shellac-nail-polish.html", image: "https://res.cloudinary.com/dvpoab5n3/image/upload/v1756011353/shellac-nail-polish_1.jpg" }
+        ];
+
+        // Function to populate related services (excluding current page)
+        function populateRelatedServices() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const relatedGrid = document.getElementById('related-services-grid');
+            
+            if (!relatedGrid) return;
+            
+            // Filter out the current page
+            const relatedServices = allNailServices.filter(service => service.url !== currentPage);
+            
+            // Populate the grid
+            relatedServices.forEach(service => {
+                const serviceCard = document.createElement('a');
+                serviceCard.href = service.url;
+                serviceCard.className = 'related-service-card';
+                serviceCard.innerHTML = `
+                    <div class="related-service-image">
+                        <img src="${service.image}" alt="${service.name} - Toronto nail salon" loading="lazy">
+                    </div>
+                    <div class="related-service-content">
+                        <h3 class="related-service-title">${service.name}</h3>
+                    </div>
+                `;
+                relatedGrid.appendChild(serviceCard);
+            });
+        }
+
+        // Initialize related services when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            populateRelatedServices();
+        });
+    </script>
 </body>
 </html>
