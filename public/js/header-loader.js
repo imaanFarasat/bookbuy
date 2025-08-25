@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Load header component
-    fetch('../../components/header.html')
+    fetch('/components/header.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load header component');
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Fallback: create a basic header
             headerContainer.innerHTML = `
                 <header class="header">
-                    <a href="../../index.html" class="logo">BOOKBUY</a>
+                    <a href="/index.html" class="logo">BOOKBUY</a>
                     <nav class="nav-menu">
                         <ul class="nav-list">
-                            <li><a href="../../index.html" class="nav-link">Home</a></li>
+                            <li><a href="/index.html" class="nav-link">Home</a></li>
                             <li><a href="https://bea-nails.bookbuy.ca/" class="nav-link">Services</a></li>
                         </ul>
                     </nav>

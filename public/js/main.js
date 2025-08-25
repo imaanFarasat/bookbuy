@@ -1,7 +1,7 @@
 // ===== COMPONENT LOADER =====
 async function loadComponent(componentName, targetId) {
     try {
-        const response = await fetch(`../components/${componentName}.html`);
+        const response = await fetch(`/components/${componentName}.html`);
         if (response.ok) {
             const html = await response.text();
             const target = document.getElementById(targetId);
