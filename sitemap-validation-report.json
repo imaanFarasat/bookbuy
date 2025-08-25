@@ -1,0 +1,537 @@
+{
+  "timestamp": "2025-08-25T07:47:06.554Z",
+  "totalUrls": 40,
+  "successfulUrls": 31,
+  "failedUrls": 9,
+  "results": [
+    {
+      "url": "https://bookbuy.ca/",
+      "statusCode": 200,
+      "loadTime": 401,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/",
+      "statusCode": 200,
+      "loadTime": 213,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "weekly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/acrylic-nails",
+      "statusCode": 200,
+      "loadTime": 340,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/almond-nails",
+      "statusCode": 525,
+      "loadTime": 215,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/bio-gel-nails",
+      "statusCode": 200,
+      "loadTime": 189,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/champagne-nails",
+      "statusCode": 200,
+      "loadTime": 239,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/chrome-nails",
+      "statusCode": 525,
+      "loadTime": 320,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/coffin-nails",
+      "statusCode": 200,
+      "loadTime": 321,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/fake-nails",
+      "statusCode": 525,
+      "loadTime": 315,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/french-tip-nails",
+      "statusCode": 200,
+      "loadTime": 251,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/gel-nails",
+      "statusCode": 200,
+      "loadTime": 184,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/gel-x-nails",
+      "statusCode": 525,
+      "loadTime": 249,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/glamnetic-nails",
+      "statusCode": 200,
+      "loadTime": 217,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/halloween-nails",
+      "statusCode": 525,
+      "loadTime": 218,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/how-to-remove-gel-nails-at-home",
+      "statusCode": 200,
+      "loadTime": 309,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-design",
+      "statusCode": 200,
+      "loadTime": 471,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-fungs",
+      "statusCode": 200,
+      "loadTime": 205,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-paint",
+      "statusCode": 525,
+      "loadTime": 167,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-salon-near-me",
+      "statusCode": 200,
+      "loadTime": 218,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-shape",
+      "statusCode": 200,
+      "loadTime": 253,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/ombre-nails",
+      "statusCode": 200,
+      "loadTime": 111,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/shellac-nails",
+      "statusCode": 200,
+      "loadTime": 260,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/shellac-nail-polish",
+      "statusCode": 525,
+      "loadTime": 191,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/stiletto-nails",
+      "statusCode": 200,
+      "loadTime": 161,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-design-ideas",
+      "statusCode": 200,
+      "loadTime": 117,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-polish-remover",
+      "statusCode": 200,
+      "loadTime": 156,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-spa",
+      "statusCode": 200,
+      "loadTime": 412,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nail-supply-store",
+      "statusCode": 200,
+      "loadTime": 282,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/pedi-and-nails",
+      "statusCode": 200,
+      "loadTime": 194,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/dnd-nail-polish",
+      "statusCode": 200,
+      "loadTime": 240,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/toe-nail-fungus",
+      "statusCode": 200,
+      "loadTime": 108,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/black-nail-designs",
+      "statusCode": 200,
+      "loadTime": 126,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/blue-nails",
+      "statusCode": 200,
+      "loadTime": 109,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/light-pink-nails",
+      "statusCode": 200,
+      "loadTime": 227,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/nude-nails",
+      "statusCode": 200,
+      "loadTime": 339,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/red-nails",
+      "statusCode": 200,
+      "loadTime": 161,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/christmas-nails",
+      "statusCode": 200,
+      "loadTime": 223,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/fall-nails",
+      "statusCode": 525,
+      "loadTime": 147,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/summer-nails",
+      "statusCode": 525,
+      "loadTime": 169,
+      "headers": {
+        "content-type": "text/plain; charset=UTF-8",
+        "content-length": "15"
+      },
+      "success": false,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://bookbuy.ca/nails/spring-nails-2025",
+      "statusCode": 200,
+      "loadTime": 163,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "success": true,
+      "error": null,
+      "lastmod": "2025-01-25",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+PERFORMANCE TEST SUMMARY
+Generated: 2025-08-25, 3:40:00 a.m.
+Base URL: https://bookbuy.ca
+Total Pages Tested: 39
+
+RESULTS:
+Successful Tests: 39
+Failed Tests: 0
+Success Rate: 100.0%
+
+PERFORMANCE METRICS:
+Average Load Time: 251ms
+Average Page Size: 61.35KB
+
+PAGES WITH ISSUES: 0
+PAGES WITH GOOD PERFORMANCE: 39
+

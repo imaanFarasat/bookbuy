@@ -3,7 +3,7 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://bookbuy.ca/</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,241 +11,241 @@
   <!-- Main Nails Category Page -->
   <url>
     <loc>https://bookbuy.ca/nails/</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Nail Service Pages -->
   <url>
-    <loc>https://bookbuy.ca/nails/acrylic-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/acrylic-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/almond-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/almond-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/bio-gel-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/bio-gel-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/champagne-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/champagne-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/chrome-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/chrome-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/coffin-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/coffin-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/fake-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/fake-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/french-tip-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/french-tip-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/gel-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/gel-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/gel-x-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/gel-x-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/glamnetic-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/glamnetic-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/halloween-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/halloween-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/how-to-remove-gel-nails-at-home.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/how-to-remove-gel-nails-at-home</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-design.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-design</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-fungs.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-fungs</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-paint.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-paint</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-salon-near-me.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-salon-near-me</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-shape.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-shape</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/ombre-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/ombre-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/shellac-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/shellac-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/shellac-nail-polish.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/shellac-nail-polish</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/stiletto-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/stiletto-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-design-ideas.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-design-ideas</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-polish-remover.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-polish-remover</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-spa.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-spa</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nail-supply-store.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nail-supply-store</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/pedi-and-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/pedi-and-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/dnd-nail-polish.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/dnd-nail-polish</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/toe-nail-fungus.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/toe-nail-fungus</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Color-Based Nail Pages -->
   <url>
-    <loc>https://bookbuy.ca/nails/black-nail-designs.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/black-nail-designs</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/blue-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/blue-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/light-pink-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/light-pink-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/nude-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/nude-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/red-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/red-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Seasonal Nail Pages -->
   <url>
-    <loc>https://bookbuy.ca/nails/christmas-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/christmas-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/fall-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/fall-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/summer-nails.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/summer-nails</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bookbuy.ca/nails/spring-nails-2025.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://bookbuy.ca/nails/spring-nails-2025</loc>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
