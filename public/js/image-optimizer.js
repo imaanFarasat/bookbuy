@@ -11,10 +11,10 @@
         transformations: {
             // Responsive breakpoints
             mobile: 'w_400,q_80,f_auto',
-            tablet: 'w_800,q_80,f_auto', 
-            desktop: 'w_1200,q_80,f_auto',
-                         // Hero images (above fold)
-             hero: 'w_800,q_85,f_auto',
+            tablet: 'w_600,q_80,f_auto', 
+            desktop: 'w_800,q_80,f_auto',
+            // Hero images (above fold) - More aggressive optimization
+            hero: 'w_600,q_75,f_auto',
             // Thumbnails
             thumbnail: 'w_300,h_200,c_fill,q_75,f_auto',
             // Gallery images
@@ -120,15 +120,24 @@
         const criticalImages = document.querySelectorAll('img[src*="cloudinary.com"]');
         
         criticalImages.forEach((img, index) => {
-            if (index < 2) { // Preload only first 2 images for faster LCP
+            if (index < 1) { // Preload only the first image (hero) for fastest LCP
                 const optimizedSrc = addCloudinaryTransformations(img.src, img);
+                
+                // Add multiple preload strategies
                 const link = document.createElement('link');
                 link.rel = 'preload';
                 link.as = 'image';
                 link.href = optimizedSrc;
                 link.fetchPriority = 'high';
                 document.head.appendChild(link);
-                console.log('Preloading critical image:', optimizedSrc);
+                
+                // Also add DNS prefetch for Cloudinary
+                const dnsPrefetch = document.createElement('link');
+                dnsPrefetch.rel = 'dns-prefetch';
+                dnsPrefetch.href = 'https://res.cloudinary.com';
+                document.head.appendChild(dnsPrefetch);
+                
+                console.log('Preloading hero image:', optimizedSrc);
             }
         });
     }
@@ -164,15 +173,36 @@
         
         console.log('Starting image optimization...');
         
+        // Prioritize hero image optimization first
+        optimizeHeroImages();
+        
+        // Then optimize everything else
         optimizeCloudinaryURLs();
         addResponsiveImages();
         preloadCriticalImages();
-        addImageDimensions(); // Call the new function here
+        addImageDimensions();
         
         const optimizeTime = performance.now() - startTime;
         console.log(`Image optimization completed in ${optimizeTime.toFixed(2)}ms`);
         
         return { optimizeTime };
+    }
+
+    // Optimize hero images first for faster LCP
+    function optimizeHeroImages() {
+        const heroImages = document.querySelectorAll('img[src*="cloudinary.com"]');
+        
+        heroImages.forEach((img, index) => {
+            if (index === 0) { // Only the first image (hero)
+                const originalSrc = img.src;
+                const optimizedSrc = addCloudinaryTransformations(originalSrc, img);
+                
+                if (optimizedSrc !== originalSrc) {
+                    img.src = optimizedSrc;
+                    console.log('Optimized hero image:', originalSrc, '→', optimizedSrc);
+                }
+            }
+        });
     }
 
     // Export for external use
