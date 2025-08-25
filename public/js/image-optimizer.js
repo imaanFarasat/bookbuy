@@ -186,8 +186,8 @@
         
         console.log('Starting image optimization...');
         
-        // Fix SSL issues first
-        fixSSLIssues();
+        // TEMPORARILY DISABLED: Fix SSL issues first
+        // fixSSLIssues();
         
         // Prioritize hero image optimization first
         optimizeHeroImages();
@@ -274,18 +274,15 @@
                 img.loading = 'eager';
                 img.removeAttribute('loading');
                 
-                const originalSrc = img.src;
-                const optimizedSrc = addCloudinaryTransformations(originalSrc, img);
-                
-                if (optimizedSrc !== originalSrc) {
-                    img.src = optimizedSrc;
-                    console.log('Optimized hero image:', originalSrc, '→', optimizedSrc);
-                }
-                
-                // Force immediate load
-                if (img.complete === false) {
-                    img.style.opacity = '1';
-                    img.style.backgroundColor = 'transparent';
+                // Only optimize if URL doesn't already have transformations
+                if (!img.src.includes('/upload/t_') && !img.src.includes('/upload/c_')) {
+                    const originalSrc = img.src;
+                    const optimizedSrc = addCloudinaryTransformations(originalSrc, img);
+                    
+                    if (optimizedSrc !== originalSrc) {
+                        img.src = optimizedSrc;
+                        console.log('Optimized hero image:', originalSrc, '→', optimizedSrc);
+                    }
                 }
             }
         });
