@@ -39,6 +39,11 @@
 
     // Add Cloudinary transformations to URL
     function addCloudinaryTransformations(url, imgElement) {
+        // Force HTTPS for all Cloudinary URLs
+        if (url.startsWith('http://')) {
+            url = url.replace('http://', 'https://');
+        }
+        
         // Skip if already has transformations
         if (url.includes('/upload/t_') || url.includes('/upload/c_')) {
             return url;
@@ -173,6 +178,9 @@
         
         console.log('Starting image optimization...');
         
+        // Fix SSL issues first
+        fixSSLIssues();
+        
         // Prioritize hero image optimization first
         optimizeHeroImages();
         
@@ -186,6 +194,66 @@
         console.log(`Image optimization completed in ${optimizeTime.toFixed(2)}ms`);
         
         return { optimizeTime };
+    }
+
+    // Fix SSL issues by converting HTTP to HTTPS
+    function fixSSLIssues() {
+        // Remove external font dependencies that cause SSL issues
+        removeExternalFontDependencies();
+        
+        // Fix all image URLs
+        const images = document.querySelectorAll('img[src^="http://"]');
+        images.forEach(img => {
+            img.src = img.src.replace('http://', 'https://');
+            console.log('Fixed SSL for image:', img.src);
+        });
+        
+        // Fix all link URLs
+        const links = document.querySelectorAll('a[href^="http://"]');
+        links.forEach(link => {
+            link.href = link.href.replace('http://', 'https://');
+            console.log('Fixed SSL for link:', link.href);
+        });
+        
+        // Fix all script URLs
+        const scripts = document.querySelectorAll('script[src^="http://"]');
+        scripts.forEach(script => {
+            script.src = script.src.replace('http://', 'https://');
+            console.log('Fixed SSL for script:', script.src);
+        });
+        
+        // Fix all link rel="stylesheet" URLs
+        const stylesheets = document.querySelectorAll('link[rel="stylesheet"][href^="http://"]');
+        stylesheets.forEach(link => {
+            link.href = link.href.replace('http://', 'https://');
+            console.log('Fixed SSL for stylesheet:', link.href);
+        });
+    }
+
+    // Remove external font dependencies that cause SSL issues
+    function removeExternalFontDependencies() {
+        // Remove Font Awesome CDN links
+        const fontAwesomeLinks = document.querySelectorAll('link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
+        fontAwesomeLinks.forEach(link => {
+            link.remove();
+            console.log('Removed Font Awesome CDN link');
+        });
+        
+        // Remove Google Fonts links
+        const googleFontsLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"], link[href*="fonts.gstatic.com"]');
+        googleFontsLinks.forEach(link => {
+            link.remove();
+            console.log('Removed Google Fonts link');
+        });
+        
+        // Remove external stylesheets with @import
+        const styleSheets = document.querySelectorAll('style');
+        styleSheets.forEach(style => {
+            if (style.textContent.includes('@import url(')) {
+                style.textContent = style.textContent.replace(/@import url\([^)]+\);/g, '');
+                console.log('Removed @import statements from inline styles');
+            }
+        });
     }
 
     // Optimize hero images first for faster LCP
