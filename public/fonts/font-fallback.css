@@ -1,0 +1,41 @@
+/* Font Fallback System - Optimized for Performance */
+
+:root {
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-secondary: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-title, .subtitle, .cta-button, .collection-title, .service-title {
+    font-family: var(--font-secondary);
+}
+
+/* Icon replacements */
+.icon-phone::before { content: "📞"; }
+.icon-envelope::before { content: "✉"; }
+.icon-location::before { content: "📍"; }
+.icon-calendar::before { content: "📅"; }
+.icon-clock::before { content: "🕒"; }
+.icon-star::before { content: "★"; }
+.icon-heart::before { content: "♥"; }
+.icon-check::before { content: "✓"; }
+.icon-plus::before { content: "+"; }
+.icon-minus::before { content: "−"; }
+.icon-times::before { content: "×"; }
+.icon-bars::before { content: "☰"; }
+.icon-search::before { content: "🔍"; }
+.icon-user::before { content: "👤"; }
+.icon-cart::before { content: "🛒"; }
+.icon-home::before { content: "🏠"; }
+.icon-info::before { content: "ℹ"; }
+.icon-warning::before { content: "⚠"; }
+.icon-error::before { content: "✗"; }
+.icon-success::before { content: "✓"; }

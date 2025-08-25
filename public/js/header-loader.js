@@ -1,5 +1,8 @@
 // Header Component Loader
 document.addEventListener('DOMContentLoaded', function() {
+    // Load optimization scripts first
+    loadOptimizations();
+    
     // Create header container if it doesn't exist
     let headerContainer = document.getElementById('header-container');
     if (!headerContainer) {
@@ -50,6 +53,21 @@ document.addEventListener('DOMContentLoaded', function() {
             initializeMobileMenu();
         });
 });
+
+// Load optimization scripts
+function loadOptimizations() {
+    // Load the optimization loader script
+    const script = document.createElement('script');
+    script.src = '/js/optimization-loader.js';
+    script.async = true;
+    script.onload = () => {
+        console.log('Optimization scripts loaded successfully');
+    };
+    script.onerror = () => {
+        console.error('Failed to load optimization scripts');
+    };
+    document.head.appendChild(script);
+}
 
 // Mobile menu functionality
 function initializeMobileMenu() {
