@@ -33,6 +33,10 @@
                 const cssMetrics = window.CSSOptimizer.init();
                 metrics.cssOptimizeTime = cssMetrics.cssOptimizeTime;
                 
+                // Load image optimization
+                const imageMetrics = window.ImageOptimizer.init();
+                metrics.imageOptimizeTime = imageMetrics.optimizeTime;
+                
                 // Additional performance enhancements
                 if (CONFIG.enableLazyLoading) {
                     optimizeImages();
