@@ -184,24 +184,20 @@
     function initImageOptimization() {
         const startTime = performance.now();
         
-        console.log('Starting image optimization...');
+        console.log('Image optimization DISABLED - page loading issues detected');
         
-        // TEMPORARILY DISABLED: Fix SSL issues first
+        // COMPLETELY DISABLED: All optimizations causing redirect loops
         // fixSSLIssues();
-        
-        // Prioritize hero image optimization first
-        optimizeHeroImages();
-        
-        // Then optimize everything else
-        optimizeCloudinaryURLs();
-        addResponsiveImages();
-        preloadCriticalImages();
-        addImageDimensions();
+        // optimizeHeroImages();
+        // optimizeCloudinaryURLs();
+        // addResponsiveImages();
+        // preloadCriticalImages();
+        // addImageDimensions();
         
         const optimizeTime = performance.now() - startTime;
-        console.log(`Image optimization completed in ${optimizeTime.toFixed(2)}ms`);
+        console.log(`Image optimization skipped - page should load normally now`);
         
-        return { optimizeTime };
+        return { optimizeTime: 0 };
     }
 
     // Fix SSL issues by converting HTTP to HTTPS
@@ -296,11 +292,11 @@
         preloadCritical: preloadCriticalImages
     };
 
-    // Auto-initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initImageOptimization);
-    } else {
-        initImageOptimization();
-    }
+    // Auto-initialize DISABLED - causing page loading issues
+    // if (document.readyState === 'loading') {
+    //     document.addEventListener('DOMContentLoaded', initImageOptimization);
+    // } else {
+    //     initImageOptimization();
+    // }
 
 })();
