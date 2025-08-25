@@ -86,7 +86,7 @@
 
     // Remove external font links
     function removeExternalFonts() {
-        const externalFonts = document.querySelectorAll('link[href*="fonts.googleapis.com"], link[href*="font-awesome"]');
+        const externalFonts = document.querySelectorAll('link[href*="fonts.googleapis.com"], link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
         externalFonts.forEach(link => {
             console.log('Removing external font:', link.href);
             link.remove();
