@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glamnetic Nails: Reviews, Application, Removal &amp; FAQs</title>
     <meta name="description" content="Discover the world of Glamnetic press-on nails! Learn about application, removal, find reviews, explore stunning looks, and get answers to all your Glamnetic nail questions.">
@@ -29,11 +33,12 @@
         <!-- Preload Critical Resources -->
     <script src="../js/optimization-loader.js"></script>
     
-    <link rel="preload" href="../css/styles.min.css" as="style">
-    <link rel="preload" href="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755166888/bea-professional-nail-technician-toronto.png" as="image">
+    <link rel="preload" href="../css/styles-clean.css" as="style">
+    <link rel="preload" href="../images/bea-hero.webp" as="image">
+    <link rel="preload" href="../images/bea-hero.avif" as="image">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="stylesheet" href="../css/styles-clean.css">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -243,10 +248,15 @@
             <div class="hero-content">
                 <div class="hero-image">
                     <div class="bea-photo-card">
-                        <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755166888/bea-professional-nail-technician-toronto.png" 
-                             alt="Bea - Professional Nail Technician Toronto" 
-                             class="bea-photo">
-                        </div>
+                        <picture class="bea-photo">
+                            <source srcset="../images/bea-hero.avif" type="image/avif">
+                            <source srcset="../images/bea-hero.webp" type="image/webp">
+                            <img src="../images/bea-hero.jpg" 
+                                 alt="Bea - Professional Nail Technician Toronto" 
+                                 class="bea-photo"
+                                 loading="eager">
+                        </picture>
+                    </div>
                 </div>
                 <div class="hero-text">
                     <div class="subtitle">Glamnetic Nails Perfected by Bea, Right Here in Toronto

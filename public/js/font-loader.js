@@ -1,6 +1,7 @@
 /**
  * Font Loader - Optimize Font Loading Performance
  * This script handles font loading optimization and caching
+ * Completely removes external font dependencies
  */
 
 (function() {
@@ -66,6 +67,22 @@
         const style = document.createElement('style');
         style.textContent = `
             /* Font Fallback System - Inline Fallback */
+            @font-face {
+                font-family: 'Inter';
+                src: url('/fonts/inter-var.woff2') format('woff2-variations');
+                font-weight: 100 900;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Poppins';
+                src: url('/fonts/poppins-var.woff2') format('woff2-variations');
+                font-weight: 100 900;
+                font-style: normal;
+                font-display: swap;
+            }
+
             :root {
                 --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 --font-secondary: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -84,21 +101,48 @@
         document.head.appendChild(style);
     }
 
-    // Remove external font links
+    // Remove ALL external font links aggressively
     function removeExternalFonts() {
-        const externalFonts = document.querySelectorAll('link[href*="fonts.googleapis.com"], link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
+        const externalFonts = document.querySelectorAll(`
+            link[href*="fonts.googleapis.com"], 
+            link[href*="font-awesome"], 
+            link[href*="cdnjs.cloudflare.com"],
+            link[href*="fonts.gstatic.com"],
+            link[href*="fontawesome"],
+            link[href*="googleapis"],
+            link[href*="cloudflare"]
+        `);
+        
+        let removedCount = 0;
         externalFonts.forEach(link => {
             console.log('Removing external font:', link.href);
             link.remove();
+            removedCount++;
         });
-        return externalFonts.length;
+        
+        // Also remove any @import statements in style tags
+        const styleTags = document.querySelectorAll('style');
+        styleTags.forEach(style => {
+            if (style.textContent.includes('@import') && 
+                (style.textContent.includes('fonts.googleapis.com') || 
+                 style.textContent.includes('font-awesome') ||
+                 style.textContent.includes('cdnjs.cloudflare.com'))) {
+                console.log('Removing external font import from style tag');
+                style.remove();
+                removedCount++;
+            }
+        });
+        
+        return removedCount;
     }
 
     // Preload critical resources
     function preloadCriticalResources() {
         const criticalResources = [
             { href: '/css/styles.min.css', as: 'style' },
-            { href: '/fonts/font-fallback.css', as: 'style' }
+            { href: '/fonts/font-fallback.css', as: 'style' },
+            { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2' },
+            { href: '/fonts/poppins-var.woff2', as: 'font', type: 'font/woff2' }
         ];
 
         criticalResources.forEach(resource => {
@@ -106,6 +150,26 @@
             link.rel = 'preload';
             link.href = resource.href;
             link.as = resource.as;
+            if (resource.type) {
+                link.type = resource.type;
+            }
+            document.head.appendChild(link);
+        });
+    }
+
+    // Add favicon links
+    function addFaviconLinks() {
+        const faviconLinks = [
+            { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'apple-touch-icon', href: '/favicon.svg' }
+        ];
+
+        faviconLinks.forEach(favicon => {
+            const link = document.createElement('link');
+            link.rel = favicon.rel;
+            link.type = favicon.type;
+            link.href = favicon.href;
             document.head.appendChild(link);
         });
     }
@@ -122,9 +186,12 @@
             return Promise.resolve({ fontLoadTime: 0, cached: true });
         }
 
-        // Remove external fonts
+        // Remove external fonts aggressively
         const removedFonts = removeExternalFonts();
         console.log(`Removed ${removedFonts} external font links`);
+
+        // Add favicon links
+        addFaviconLinks();
 
         // Preload critical resources
         preloadCriticalResources();

@@ -1,5 +1,22 @@
 /* Font Fallback System - Optimized for Performance */
 
+/* Local Font Declarations */
+@font-face {
+    font-family: 'Inter';
+    src: url('./inter-var.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./poppins-var.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-secondary: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -18,7 +35,7 @@ body {
     font-family: var(--font-secondary);
 }
 
-/* Icon replacements */
+/* Enhanced Icon replacements - Replace Font Awesome */
 .icon-phone::before { content: "📞"; }
 .icon-envelope::before { content: "✉"; }
 .icon-location::before { content: "📍"; }
@@ -39,3 +56,147 @@ body {
 .icon-warning::before { content: "⚠"; }
 .icon-error::before { content: "✗"; }
 .icon-success::before { content: "✓"; }
+.icon-instagram::before { content: "📷"; }
+.icon-facebook::before { content: "📘"; }
+.icon-twitter::before { content: "🐦"; }
+.icon-youtube::before { content: "📺"; }
+.icon-linkedin::before { content: "💼"; }
+.icon-arrow-right::before { content: "→"; }
+.icon-arrow-left::before { content: "←"; }
+.icon-arrow-up::before { content: "↑"; }
+.icon-arrow-down::before { content: "↓"; }
+.icon-chevron-right::before { content: "›"; }
+.icon-chevron-left::before { content: "‹"; }
+.icon-chevron-up::before { content: "⌃"; }
+.icon-chevron-down::before { content: "⌄"; }
+.icon-close::before { content: "✕"; }
+.icon-menu::before { content: "☰"; }
+.icon-settings::before { content: "⚙"; }
+.icon-download::before { content: "⬇"; }
+.icon-upload::before { content: "⬆"; }
+.icon-share::before { content: "📤"; }
+.icon-bookmark::before { content: "🔖"; }
+.icon-like::before { content: "👍"; }
+.icon-dislike::before { content: "👎"; }
+.icon-comment::before { content: "💬"; }
+.icon-edit::before { content: "✏"; }
+.icon-delete::before { content: "🗑"; }
+.icon-save::before { content: "💾"; }
+.icon-print::before { content: "🖨"; }
+.icon-camera::before { content: "📷"; }
+.icon-video::before { content: "🎥"; }
+.icon-music::before { content: "🎵"; }
+.icon-game::before { content: "🎮"; }
+.icon-gift::before { content: "🎁"; }
+.icon-tag::before { content: "🏷"; }
+.icon-price::before { content: "💰"; }
+.icon-discount::before { content: "🏷"; }
+.icon-sale::before { content: "🔥"; }
+.icon-new::before { content: "🆕"; }
+.icon-hot::before { content: "🔥"; }
+.icon-trending::before { content: "📈"; }
+.icon-fire::before { content: "🔥"; }
+.icon-sparkles::before { content: "✨"; }
+.icon-star-filled::before { content: "⭐"; }
+.icon-heart-filled::before { content: "❤"; }
+.icon-check-circle::before { content: "✅"; }
+.icon-exclamation::before { content: "❗"; }
+.icon-question::before { content: "❓"; }
+.icon-bell::before { content: "🔔"; }
+.icon-mail::before { content: "📧"; }
+.icon-phone-alt::before { content: "📱"; }
+.icon-mobile::before { content: "📱"; }
+.icon-tablet::before { content: "📱"; }
+.icon-laptop::before { content: "💻"; }
+.icon-desktop::before { content: "🖥"; }
+.icon-wifi::before { content: "📶"; }
+.icon-bluetooth::before { content: "📶"; }
+.icon-battery::before { content: "🔋"; }
+.icon-charging::before { content: "⚡"; }
+.icon-sun::before { content: "☀"; }
+.icon-moon::before { content: "🌙"; }
+.icon-cloud::before { content: "☁"; }
+.icon-rain::before { content: "🌧"; }
+.icon-snow::before { content: "❄"; }
+.icon-thunder::before { content: "⚡"; }
+.icon-umbrella::before { content: "☂"; }
+.icon-tree::before { content: "🌳"; }
+.icon-flower::before { content: "🌸"; }
+.icon-leaf::before { content: "🍃"; }
+.icon-seed::before { content: "🌱"; }
+.icon-car::before { content: "🚗"; }
+.icon-bus::before { content: "🚌"; }
+.icon-train::before { content: "🚆"; }
+.icon-plane::before { content: "✈"; }
+.icon-ship::before { content: "🚢"; }
+.icon-bike::before { content: "🚲"; }
+.icon-walk::before { content: "🚶"; }
+.icon-run::before { content: "🏃"; }
+.icon-swim::before { content: "🏊"; }
+.icon-gym::before { content: "💪"; }
+.icon-yoga::before { content: "🧘"; }
+.icon-meditation::before { content: "🧘"; }
+.icon-sleep::before { content: "😴"; }
+.icon-coffee::before { content: "☕"; }
+.icon-tea::before { content: "🍵"; }
+.icon-water::before { content: "💧"; }
+.icon-food::before { content: "🍽"; }
+.icon-restaurant::before { content: "🍽"; }
+.icon-cafe::before { content: "☕"; }
+.icon-bar::before { content: "🍺"; }
+.icon-wine::before { content: "🍷"; }
+.icon-cocktail::before { content: "🍸"; }
+.icon-birthday::before { content: "🎂"; }
+.icon-party::before { content: "🎉"; }
+.icon-celebration::before { content: "🎊"; }
+.icon-confetti::before { content: "🎊"; }
+.icon-balloon::before { content: "🎈"; }
+.icon-cake::before { content: "🎂"; }
+.icon-candle::before { content: "🕯"; }
+.icon-magic::before { content: "✨"; }
+.icon-wand::before { content: "🪄"; }
+.icon-crystal::before { content: "💎"; }
+.icon-gem::before { content: "💎"; }
+.icon-diamond::before { content: "💎"; }
+.icon-pearl::before { content: "🫧"; }
+.icon-gold::before { content: "🥇"; }
+.icon-silver::before { content: "🥈"; }
+.icon-bronze::before { content: "🥉"; }
+.icon-trophy::before { content: "🏆"; }
+.icon-medal::before { content: "🏅"; }
+.icon-crown::before { content: "👑"; }
+.icon-throne::before { content: "🪑"; }
+.icon-castle::before { content: "🏰"; }
+.icon-palace::before { content: "🏛"; }
+.icon-temple::before { content: "🛕"; }
+.icon-church::before { content: "⛪"; }
+.icon-mosque::before { content: "🕌"; }
+.icon-synagogue::before { content: "🕍"; }
+.icon-buddha::before { content: "🕉"; }
+.icon-cross::before { content: "✝"; }
+.icon-star-david::before { content: "✡"; }
+.icon-crescent::before { content: "☪"; }
+.icon-om::before { content: "🕉"; }
+.icon-yin-yang::before { content: "☯"; }
+.icon-infinity::before { content: "∞"; }
+.icon-phi::before { content: "φ"; }
+.icon-pi::before { content: "π"; }
+.icon-sigma::before { content: "Σ"; }
+.icon-omega::before { content: "Ω"; }
+.icon-alpha::before { content: "α"; }
+.icon-beta::before { content: "β"; }
+.icon-gamma::before { content: "γ"; }
+.icon-delta::before { content: "δ"; }
+.icon-epsilon::before { content: "ε"; }
+.icon-theta::before { content: "θ"; }
+.icon-lambda::before { content: "λ"; }
+.icon-mu::before { content: "μ"; }
+.icon-nu::before { content: "ν"; }
+.icon-xi::before { content: "ξ"; }
+.icon-omicron::before { content: "ο"; }
+.icon-rho::before { content: "ρ"; }
+.icon-tau::before { content: "τ"; }
+.icon-upsilon::before { content: "υ"; }
+.icon-chi::before { content: "χ"; }
+.icon-psi::before { content: "ψ"; }
+.icon-omega::before { content: "ω"; }
