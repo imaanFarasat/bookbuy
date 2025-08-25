@@ -13,8 +13,8 @@
             mobile: 'w_400,q_80,f_auto',
             tablet: 'w_600,q_80,f_auto', 
             desktop: 'w_800,q_80,f_auto',
-            // Hero images (above fold) - More aggressive optimization
-            hero: 'w_600,q_75,f_auto',
+            // Hero images (above fold) - Less aggressive for faster loading
+            hero: 'w_800,q_80,f_auto',
             // Thumbnails
             thumbnail: 'w_300,h_200,c_fill,q_75,f_auto',
             // Gallery images
@@ -151,13 +151,21 @@
     function addImageDimensions() {
         const images = document.querySelectorAll('img[src*="cloudinary.com"]:not([width]):not([height])');
         
-        images.forEach(img => {
+        images.forEach((img, index) => {
+            // Skip hero image (first image) - don't add loading effects
+            if (index === 0) {
+                img.style.aspectRatio = '16/9';
+                img.style.width = '100%';
+                img.style.height = 'auto';
+                return; // Skip loading effects for hero
+            }
+            
             // Set aspect ratio to prevent layout shift
             img.style.aspectRatio = '16/9'; // Default aspect ratio
             img.style.width = '100%';
             img.style.height = 'auto';
             
-            // Add loading placeholder
+            // Add loading placeholder only for non-hero images
             img.style.backgroundColor = '#f0f0f0';
             img.style.transition = 'opacity 0.3s ease';
             
@@ -262,12 +270,22 @@
         
         heroImages.forEach((img, index) => {
             if (index === 0) { // Only the first image (hero)
+                // Remove lazy loading from hero image
+                img.loading = 'eager';
+                img.removeAttribute('loading');
+                
                 const originalSrc = img.src;
                 const optimizedSrc = addCloudinaryTransformations(originalSrc, img);
                 
                 if (optimizedSrc !== originalSrc) {
                     img.src = optimizedSrc;
                     console.log('Optimized hero image:', originalSrc, '→', optimizedSrc);
+                }
+                
+                // Force immediate load
+                if (img.complete === false) {
+                    img.style.opacity = '1';
+                    img.style.backgroundColor = 'transparent';
                 }
             }
         });
