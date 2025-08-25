@@ -1,5 +1,6 @@
 /**
- * Page Enhancer - Main Performance Coordinator
+ * Page Enhancer - Additional Performance Optimizations
+ * Handles lazy loading, external link optimization, and performance monitoring
  */
 
 (function() {
@@ -23,45 +24,30 @@
         
         console.log('Starting page optimizations...');
 
-        // Load font optimization
-        return window.FontLoader.init()
-            .then(fontMetrics => {
-                metrics.fontLoadTime = fontMetrics.fontLoadTime;
-                metrics.externalFontsRemoved = fontMetrics.removedFonts || 0;
-                
-                // Load CSS optimization
-                const cssMetrics = window.CSSOptimizer.init();
-                metrics.cssOptimizeTime = cssMetrics.cssOptimizeTime;
-                
-                // Image optimization disabled - causing page loading issues
-                // const imageMetrics = window.ImageOptimizer.init();
-                // metrics.imageOptimizeTime = imageMetrics.optimizeTime;
-                
-                // Additional performance enhancements
-                if (CONFIG.enableLazyLoading) {
-                    optimizeImages();
-                }
-                
-                if (CONFIG.enableExternalLinkOptimization) {
-                    optimizeExternalLinks();
-                }
-                
-                metrics.totalOptimizeTime = performance.now() - startTime;
-                
-                console.log(`Page optimizations completed in ${metrics.totalOptimizeTime.toFixed(2)}ms`);
-                
-                // Dispatch completion event
-                window.dispatchEvent(new CustomEvent('pageOptimizationsComplete', {
-                    detail: metrics
-                }));
-                
-                return metrics;
-            })
-            .catch(error => {
-                console.error('Page optimization failed:', error);
-                metrics.totalOptimizeTime = performance.now() - startTime;
-                return metrics;
-            });
+        // Font and CSS optimization already handled by other scripts
+        metrics.fontLoadTime = 0;
+        metrics.externalFontsRemoved = 0;
+        metrics.cssOptimizeTime = 0;
+        
+        // Additional performance enhancements
+        if (CONFIG.enableLazyLoading) {
+            optimizeImages();
+        }
+        
+        if (CONFIG.enableExternalLinkOptimization) {
+            optimizeExternalLinks();
+        }
+        
+        metrics.totalOptimizeTime = performance.now() - startTime;
+        
+        console.log(`Page optimizations completed in ${metrics.totalOptimizeTime.toFixed(2)}ms`);
+        
+        // Dispatch completion event
+        window.dispatchEvent(new CustomEvent('pageOptimizationsComplete', {
+            detail: metrics
+        }));
+        
+        return metrics;
     }
 
     function optimizeImages() {
