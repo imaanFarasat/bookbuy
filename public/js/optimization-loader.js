@@ -9,7 +9,6 @@
         const scripts = [
             '/js/font-loader.js',
             '/js/css-optimizer.js',
-            '/js/image-optimizer.js',
             '/js/page-enhancer.js'
         ];
 
