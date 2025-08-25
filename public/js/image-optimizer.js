@@ -13,8 +13,8 @@
             mobile: 'w_400,q_80,f_auto',
             tablet: 'w_800,q_80,f_auto', 
             desktop: 'w_1200,q_80,f_auto',
-            // Hero images (above fold)
-            hero: 'w_1200,q_85,f_auto',
+                         // Hero images (above fold)
+             hero: 'w_800,q_85,f_auto',
             // Thumbnails
             thumbnail: 'w_300,h_200,c_fill,q_75,f_auto',
             // Gallery images
@@ -120,13 +120,41 @@
         const criticalImages = document.querySelectorAll('img[src*="cloudinary.com"]');
         
         criticalImages.forEach((img, index) => {
-            if (index < 3) { // Preload first 3 images
+            if (index < 2) { // Preload only first 2 images for faster LCP
+                const optimizedSrc = addCloudinaryTransformations(img.src, img);
                 const link = document.createElement('link');
                 link.rel = 'preload';
                 link.as = 'image';
-                link.href = img.src;
+                link.href = optimizedSrc;
+                link.fetchPriority = 'high';
                 document.head.appendChild(link);
+                console.log('Preloading critical image:', optimizedSrc);
             }
+        });
+    }
+
+    // Add image dimensions to prevent layout shift
+    function addImageDimensions() {
+        const images = document.querySelectorAll('img[src*="cloudinary.com"]:not([width]):not([height])');
+        
+        images.forEach(img => {
+            // Set aspect ratio to prevent layout shift
+            img.style.aspectRatio = '16/9'; // Default aspect ratio
+            img.style.width = '100%';
+            img.style.height = 'auto';
+            
+            // Add loading placeholder
+            img.style.backgroundColor = '#f0f0f0';
+            img.style.transition = 'opacity 0.3s ease';
+            
+            // Show image when loaded
+            img.onload = function() {
+                this.style.opacity = '1';
+                this.style.backgroundColor = 'transparent';
+            };
+            
+            // Set initial opacity
+            img.style.opacity = '0';
         });
     }
 
@@ -139,6 +167,7 @@
         optimizeCloudinaryURLs();
         addResponsiveImages();
         preloadCriticalImages();
+        addImageDimensions(); // Call the new function here
         
         const optimizeTime = performance.now() - startTime;
         console.log(`Image optimization completed in ${optimizeTime.toFixed(2)}ms`);
